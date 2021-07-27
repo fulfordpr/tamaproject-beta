@@ -49,3 +49,7 @@ body{
     justify-self: end;
 
 }
+
+#snareSize, #kDrumSize, #inlay{
+    display:none;
+}
