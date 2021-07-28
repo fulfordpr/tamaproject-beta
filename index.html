@@ -16,14 +16,15 @@
     <main id="main">
         <div id="output">
             <div class="output-container">
-                <span id="mainId">ID GOES HERE
+                <span id="mainId">
+                    <span id="series"></span><span id="type"></span><span id="size"></span><span id="inlay"></span><span id="hoopsId"></span>     
                 </span>   
                 </div>
                 <div class="main-pricing">
-                    <span class="main-retail">Retail: <span class="price">$4155</span>
-                    <span class="main-map">MAP: <span class="price">$2522.68</span></span>
-                    <span class="main-cost">Cost: <span class="price">$1009.07</span>
-                    <span class="main-gp">GP: <span class="price">$1513.61</span>  
+                    <span id="retail"></span>
+                    <span id="map"></span>
+                    <span id="cost"></span>
+                    <span id="gp"></span>  
                 </div>
                 <div id="options">
                     <form action="">
@@ -57,11 +58,17 @@
 
                         <!-- making space for other params -->
 
-                        <select name="inlay" id="inlay">
+                        <select name="inlayOption" id="inlayOption">
                             <option value="Choose">Would you like an inlay?</option>
-                            <option value="d">Inside and Outside</option>
-                            <option value="s">Outside Inlay Only</option>
+                            <option value="s">Outside Inlay</option>
                             <option value="n">No Inlay</option>
+                        </select>
+
+                        <select name="hoops" id="hoops">
+                            <option value="Choose">Choose a Hoop Finish</option>
+                            <option value="match">Match the Hoop to the Drum</option>
+                            <option value="natural">Natural hoop</option>
+                            <option value="brown">Brown Hoops</option>
                         </select>
                     </form>
                 </div>
