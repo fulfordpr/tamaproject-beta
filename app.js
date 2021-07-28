@@ -7,35 +7,201 @@ var hoops = document.querySelector('#hoops');
 var lineId = document.querySelector('#tamaLine');
 var starDrumType = document.querySelector('#starDrumType');
 var snareSize = document.getElementById('snareSize');
-var kDrumSize = document.getElementById('kDrumSize');
+var kDrumSizeStar = document.getElementById('kDrumSizeStar');
 var inlayOption = document.querySelector('#inlayOption');
 var outputId = ''
 var retail = document.getElementById('retail');
 var map = document.getElementById('map');
 var cost = document.getElementById('cost');
 var gp = document.getElementById('gp');
+var tDrumSizeStar = document.getElementById('tDrumSizeStar');
 // var lineIdValue = lineId.selectedOptions[lineId.selectedIndex].value;
 
 
 //setting pricing for each itemID ###############################
 var pricing = [
-    {
-        id: 'TBS1465',
-        retail: 1647.00,
-        map: 999.00,
-        get cost(){
-            return (this.map * 0.5) * .8;
-        }
-    },
+    //Star Snares ###################
     {
         id: 'TBS136',
         retail: 1647.00,
         map: 999.00,
         get cost(){
-            return (this.map * 0.5) * .8;
+            return (this.map * 0.7) * .8;
         }
-    }
+    },
+    {
+        id: 'TBS1455',
+        retail: 1647.00,
+        map: 999.00,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBS1465',
+        retail: 1647.00,
+        map: 999.00,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBS148',
+        retail: 1647.00,
+        map: 999.00,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    //###################################
+    //Star Kicks ########################
+    //###################################
+    {
+        id: 'TBB1612',
+        retail: 3891.00,
+        map: 2362.39,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBB1814',
+        retail: 4002,
+        map: 2429.79,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBB1815',
+        retail: 4002,
+        map: 2429.79,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBB1816',
+        retail: 4002,
+        map: 2429.79,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBB2014',
+        retail: 4155,
+        map: 2522.68,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBB2016',
+        retail: 4155,
+        map: 2522.68,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBB2017S',
+        retail: 4155,
+        map: 2522.68,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBB2018',
+        retail: 4155,
+        map: 2522.68,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBB2214',
+        retail: 4374,
+        map: 2655.64,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBB2216',
+        retail: 4374,
+        map: 2655.64,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBB2217',
+        retail: 4374,
+        map: 2655.64,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBB2218',
+        retail: 4374,
+        map: 2655.64,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBB2414',
+        retail: 4610,
+        map: 2798.93,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBB2416',
+        retail: 4610,
+        map: 2798.93,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBB2417',
+        retail: 4610,
+        map: 2798.93,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBB2418',
+        retail: 4610,
+        map: 2798.93,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBB2614',
+        retail: 5012,
+        map: 3043,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBB2616',
+        retail: 5012,
+        map: 3043,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
 ]
+
 
 function outputItemId(){
     outputId = mainId.textContent + type.textContent + size.textContent + inlay.textContent + hoopsId.textContent;
@@ -55,8 +221,8 @@ function outputPrice(){
         if (outputId.includes(pricing[i].id)){
             retail.textContent = `Retail: $ ${pricing[i].retail}`;
             map.textContent = `MAP: $ ${pricing[i].map}`;
-            cost.textContent = `Cost: $ ${pricing[i].cost}`;
-            gp.textContent = `GP: $ ${pricing[i].map - pricing[i].cost}`;
+            cost.textContent = `Cost: $ ${pricing[i].cost.toFixed(2)}`;
+            gp.textContent = `GP: $ ${(pricing[i].map - pricing[i].cost).toFixed(2)}`;
         } 
 
 
@@ -81,9 +247,11 @@ lineId.addEventListener('change', (event) =>{
     if (value == 'tamaStarBubinga'){
         newText = 'TB';
         hoops.style.display = "inline";
+        inlayOption.style.display = "inline";
     }else if (value == 'tamaStarMaple'){
         newText = 'TM';
         hoops.style.display = "inline";
+        inlayOption.style.display = "inline";
     }else if (value == 'tamaStarWal'){
         newText = 'TW';
     }
@@ -93,13 +261,16 @@ lineId.addEventListener('change', (event) =>{
 });
 
 
+
 // CHOOSING THE TYPE OF DRUM YOU WANT TO MAKE ##############
 starDrumType.addEventListener('change', (event) =>{
     type.textContent = ''
     const value = event.target.value;
     //RESETS THE DISPLAY OF THE SELECT BOXES
     snareSize.style.display = "none";
-    kDrumSize.style.display = "none";
+    kDrumSizeStar.style.display = "none";
+    tDrumSizeStar.style.display = "none";
+    tDrumSizeStar
     let newText = ''
     
  
@@ -110,11 +281,14 @@ starDrumType.addEventListener('change', (event) =>{
         snareSize.style.display = "inline";
     }else if (value == 'kDrum'){
         newText = 'B';
-        kDrumSize.style.display = "inline";
+        if (lineId.value == "tamaStarBubinga" || lineId.value == "tamaStarMaple"){
+            kDrumSizeStar.style.display = "inline";
+        }
     }else if (value == 'fTom'){
         newText = 'F';
     }else if (value == 'rTom'){
         newText = 'T';
+        tDrumSizeStar.style.display = "inline";
     }
 
     type.textContent = newText;
@@ -123,29 +297,47 @@ starDrumType.addEventListener('change', (event) =>{
 });
 
 
+
+
+
 //Selecting Drum sizes #################################
 
 //SNARE DRUMS ##########################################
 snareSize.addEventListener('change', (event) =>{
     size.textContent = '';
     const value = event.target.value;
-    let newText = '';
-
-
-    if (value == '136'){
-        newText = '136';
-    }else if (value == '1455'){
-        newText = '1455';
-    }else if (value == '1465'){
-        newText = '1465';
-    }else if (value == '148'){
-        newText = '148';
-    }
-
+    let newText = value;
     size.textContent = newText;
     outputItemId()
     outputPrice()
 });
+
+
+//Kick Drum Sizes #######################################
+kDrumSizeStar.addEventListener('change', (event) =>{
+    size.textContent = '';
+    const value = event.target.value;
+    let newText = value;
+    size.textContent = newText;
+    outputItemId()
+    outputPrice()
+});
+
+
+//Tom Drum Sisez #######################################
+tDrumSizeStar.addEventListener('change', (event) =>{
+    size.textContent = '';
+    const value = event.target.value;
+    let newText = value;
+    size.textContent = newText;
+    outputItemId()
+    outputPrice()
+});
+
+
+
+
+
 
 
 
@@ -154,15 +346,9 @@ inlayOption.addEventListener('change', (event) =>{
     inlay.textContent = '';
     const value = event.target.value;
     let newText = '';
-
-    
-    if (value == 's'){
-        newText = 'S';
-    }else if (value == 'n'){
-        newText = '';
+    if (value != "Choose"){
+        newText = value;
     }
-    
-    
     inlay.textContent = newText;
     outputItemId()
     outputPrice()
@@ -177,15 +363,10 @@ hoops.addEventListener('change', (event) =>{
     const value = event.target.value;
     let newText = '';
 
-
-    if (value == 'match'){
-        newText = '';
-    }else if (value == 'brown'){
-        newText = 'B';
-    }else if (value == 'natural'){
-        newText = 'N';
+    if (value != "Choose" && value != "match" ){
+        newText = value
     }
-    
+
     hoopsId.textContent = newText;
     outputItemId()
     outputPrice()
