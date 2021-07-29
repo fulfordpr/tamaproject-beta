@@ -200,6 +200,196 @@ var pricing = [
             return (this.map * 0.7) * .8;
         }
     },
+    //####################################################
+    //STAR RACK TOMS #####################################
+    //####################################################
+    {
+        id: 'TBT0806',
+        retail: 1410,
+        map: 856.07,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBT0807',
+        retail: 1410,
+        map: 856.07,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBT0808S',
+        retail: 1410,
+        map: 856.07,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBT1065',
+        retail: 1555,
+        map: 944.11,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBT1007',
+        retail: 1555,
+        map: 944.11,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBT1008',
+        retail: 1555,
+        map: 944.11,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBT1009',
+        retail: 1555,
+        map: 944.11,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBT1010',
+        retail: 1555,
+        map: 944.11,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBT1207',
+        retail: 1743,
+        map: 1058.25,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBT1208',
+        retail: 1743,
+        map: 1058.25,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBT1209S',
+        retail: 1743,
+        map: 1058.25,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBT1210',
+        retail: 1743,
+        map: 1058.25,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBT1211',
+        retail: 1743,
+        map: 1058.25,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBT1375',
+        retail: 1934,
+        map: 1174.21,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBT1309',
+        retail: 1934,
+        map: 1174.21,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBT1310',
+        retail: 1934,
+        map: 1174.21,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBT1311',
+        retail: 1934,
+        map: 1174.21,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBT1312',
+        retail: 1934,
+        map: 11174.21,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBT1408',
+        retail: 2127,
+        map: 1291.39,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBT1410',
+        retail: 2127,
+        map: 1291.39,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBT1411',
+        retail: 2127,
+        map: 1291.39,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBT1412',
+        retail: 2127,
+        map: 1291.39,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+    {
+        id: 'TBT1413',
+        retail: 2127,
+        map: 1291.39,
+        get cost(){
+            return (this.map * 0.7) * .8;
+        }
+    },
+
+    
+
 ]
 
 
