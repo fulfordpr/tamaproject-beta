@@ -51,6 +51,6 @@ body{
 
 }
 
-#snareSize, #kDrumSizeStar, #hoops, #inlayOption, #tDrumSizeStar{
+#snareSize, #kDrumSizeStar, #hoops, #inlayOption, #tDrumSizeStar, #fDrumSizeStar{
     display:none;
 }

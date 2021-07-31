@@ -1,21 +1,40 @@
+// tama series
 var mainId = document.querySelector('#series');
-var type = document.querySelector('#type');
-var size = document.querySelector('#size');
-var hoopsId = document.querySelector('#hoopsId');
-var inlay = document.querySelector('#inlay');
-var hoops = document.querySelector('#hoops');
 var lineId = document.querySelector('#tamaLine');
+//drum type
+var type = document.querySelector('#type');
+//star series drums
 var starDrumType = document.querySelector('#starDrumType');
-var snareSize = document.getElementById('snareSize');
 var kDrumSizeStar = document.getElementById('kDrumSizeStar');
+var snareSize = document.getElementById('snareSize');
+var tDrumSizeStar = document.getElementById('tDrumSizeStar');
+var fDrumSizeStar = document.getElementById('fDrumSizeStar');
+//drum sizes
+var size = document.querySelector('#size');
+//add ons
+var hoopsId = document.querySelector('#hoopsId');
+var hoops = document.querySelector('#hoops');
+var inlay = document.querySelector('#inlay');
 var inlayOption = document.querySelector('#inlayOption');
-var outputId = ''
+//pricing
 var retail = document.getElementById('retail');
 var map = document.getElementById('map');
 var cost = document.getElementById('cost');
 var gp = document.getElementById('gp');
-var tDrumSizeStar = document.getElementById('tDrumSizeStar');
+
+var outputId = ''
 // var lineIdValue = lineId.selectedOptions[lineId.selectedIndex].value;
+
+
+// function password(){
+//     let pass = prompt('What is the secret code?');
+
+//     while (pass != 'SweetH2o'){
+//         pass;
+//     }
+// }
+
+
 
 
 //setting pricing for each itemID ###############################
@@ -26,7 +45,7 @@ var pricing = [
         retail: 1647.00,
         map: 999.00,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -34,7 +53,7 @@ var pricing = [
         retail: 1647.00,
         map: 999.00,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -42,7 +61,7 @@ var pricing = [
         retail: 1647.00,
         map: 999.00,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -50,7 +69,7 @@ var pricing = [
         retail: 1647.00,
         map: 999.00,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     //###################################
@@ -61,7 +80,7 @@ var pricing = [
         retail: 3891.00,
         map: 2362.39,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -69,7 +88,7 @@ var pricing = [
         retail: 4002,
         map: 2429.79,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -77,7 +96,7 @@ var pricing = [
         retail: 4002,
         map: 2429.79,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -85,7 +104,7 @@ var pricing = [
         retail: 4002,
         map: 2429.79,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -93,7 +112,7 @@ var pricing = [
         retail: 4155,
         map: 2522.68,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -101,7 +120,7 @@ var pricing = [
         retail: 4155,
         map: 2522.68,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -109,7 +128,7 @@ var pricing = [
         retail: 4155,
         map: 2522.68,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -117,7 +136,7 @@ var pricing = [
         retail: 4155,
         map: 2522.68,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -125,7 +144,7 @@ var pricing = [
         retail: 4374,
         map: 2655.64,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -133,7 +152,7 @@ var pricing = [
         retail: 4374,
         map: 2655.64,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -141,7 +160,7 @@ var pricing = [
         retail: 4374,
         map: 2655.64,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -149,7 +168,7 @@ var pricing = [
         retail: 4374,
         map: 2655.64,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -157,7 +176,7 @@ var pricing = [
         retail: 4610,
         map: 2798.93,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -165,7 +184,7 @@ var pricing = [
         retail: 4610,
         map: 2798.93,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -173,7 +192,7 @@ var pricing = [
         retail: 4610,
         map: 2798.93,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -181,7 +200,7 @@ var pricing = [
         retail: 4610,
         map: 2798.93,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -189,7 +208,7 @@ var pricing = [
         retail: 5012,
         map: 3043,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -197,7 +216,7 @@ var pricing = [
         retail: 5012,
         map: 3043,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     //####################################################
@@ -208,7 +227,7 @@ var pricing = [
         retail: 1410,
         map: 856.07,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -216,7 +235,7 @@ var pricing = [
         retail: 1410,
         map: 856.07,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -224,7 +243,7 @@ var pricing = [
         retail: 1410,
         map: 856.07,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -232,7 +251,7 @@ var pricing = [
         retail: 1555,
         map: 944.11,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -240,7 +259,7 @@ var pricing = [
         retail: 1555,
         map: 944.11,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -248,7 +267,7 @@ var pricing = [
         retail: 1555,
         map: 944.11,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -256,7 +275,7 @@ var pricing = [
         retail: 1555,
         map: 944.11,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -264,7 +283,7 @@ var pricing = [
         retail: 1555,
         map: 944.11,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -272,7 +291,7 @@ var pricing = [
         retail: 1743,
         map: 1058.25,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -280,7 +299,7 @@ var pricing = [
         retail: 1743,
         map: 1058.25,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -288,7 +307,7 @@ var pricing = [
         retail: 1743,
         map: 1058.25,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -296,7 +315,7 @@ var pricing = [
         retail: 1743,
         map: 1058.25,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -304,7 +323,7 @@ var pricing = [
         retail: 1743,
         map: 1058.25,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -312,7 +331,7 @@ var pricing = [
         retail: 1934,
         map: 1174.21,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -320,7 +339,7 @@ var pricing = [
         retail: 1934,
         map: 1174.21,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -328,7 +347,7 @@ var pricing = [
         retail: 1934,
         map: 1174.21,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -336,7 +355,7 @@ var pricing = [
         retail: 1934,
         map: 1174.21,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -344,7 +363,7 @@ var pricing = [
         retail: 1934,
         map: 11174.21,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -352,7 +371,7 @@ var pricing = [
         retail: 2127,
         map: 1291.39,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -360,7 +379,7 @@ var pricing = [
         retail: 2127,
         map: 1291.39,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -368,7 +387,7 @@ var pricing = [
         retail: 2127,
         map: 1291.39,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -376,7 +395,7 @@ var pricing = [
         retail: 2127,
         map: 1291.39,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
     {
@@ -384,10 +403,116 @@ var pricing = [
         retail: 2127,
         map: 1291.39,
         get cost(){
-            return (this.map * 0.7) * .8;
+            return (this.map * 0.5) * .8;
         }
     },
-
+    //####################################################
+    //STAR RACK TOMS #####################################
+    //####################################################
+    {
+        id: 'TBF1312',
+        retail: 2163,
+        map: 1369.71,
+        get cost(){
+            return (this.map * 0.5) * .8;
+        }
+    },
+    {
+        id: 'TBF1412',
+        retail: 2256,
+        map: 1369.71,
+        get cost(){
+            return (this.map * 0.5) * .8;
+        }
+    },
+    {
+        id: 'TBF1413',
+        retail: 2256,
+        map: 1369.71,
+        get cost(){
+            return (this.map * 0.5) * .8;
+        }
+    },
+    {
+        id: 'TBF1414',
+        retail: 2256,
+        map: 1369.71,
+        get cost(){
+            return (this.map * 0.5) * .8;
+        }
+    },
+    {
+        id: 'TBF1513',
+        retail: 2383,
+        map: 1446.82,
+        get cost(){
+            return (this.map * 0.5) * .8;
+        }
+    },
+    {
+        id: 'TBF1514',
+        retail: 2383,
+        map: 1446.82,
+        get cost(){
+            return (this.map * 0.5) * .8;
+        }
+    },
+    {
+        id: 'TBF1515',
+        retail: 2383,
+        map: 1446.82,
+        get cost(){
+            return (this.map * 0.5) * .8;
+        }
+    },
+    {
+        id: 'TBF1614',
+        retail: 2527,
+        map: 1446.82,
+        get cost(){
+            return (this.map * 0.5) * .8;
+        }
+    },
+    {
+        id: 'TBF1615',
+        retail: 2527,
+        map: 1446.82,
+        get cost(){
+            return (this.map * 0.5) * .8;
+        }
+    },
+    {
+        id: 'TBF1616',
+        retail: 2527,
+        map: 1446.82,
+        get cost(){
+            return (this.map * 0.5) * .8;
+        }
+    },
+    {
+        id: 'TBF1814',
+        retail: 2673,
+        map: 1622.89,
+        get cost(){
+            return (this.map * 0.5) * .8;
+        }
+    },
+    {
+        id: 'TBF1815',
+        retail: 2673,
+        map: 1622.89,
+        get cost(){
+            return (this.map * 0.5) * .8;
+        }
+    },
+    {
+        id: 'TBF1816',
+        retail: 2673,
+        map: 1622.89,
+        get cost(){
+            return (this.map * 0.5) * .8;
+        }
+    },
     
 
 ]
@@ -403,19 +528,12 @@ function outputItemId(){
 //ID PER THE PRICELIST#############################################
 function outputPrice(){
     for (i = 0; i < pricing.length; i++){
-        // retail.textContent = '';
-        // map.textContent = '';
-        // cost.textContent = '';
-        // gp.textContent = '';
-
         if (outputId.includes(pricing[i].id)){
             retail.textContent = `Retail: $ ${pricing[i].retail}`;
             map.textContent = `MAP: $ ${pricing[i].map}`;
             cost.textContent = `Cost: $ ${pricing[i].cost.toFixed(2)}`;
             gp.textContent = `GP: $ ${(pricing[i].map - pricing[i].cost).toFixed(2)}`;
         } 
-
-
     }
 }
 
@@ -460,30 +578,48 @@ starDrumType.addEventListener('change', (event) =>{
     snareSize.style.display = "none";
     kDrumSizeStar.style.display = "none";
     tDrumSizeStar.style.display = "none";
-    tDrumSizeStar
+    fDrumSizeStar.style.display = "none";
     let newText = ''
     
  
     // ADDING TO ITEMID AND MAKING THE SIZE BOX
     //AVAILABLE FOR THE PARTICULAR TYPE OF DRUM
-    if (value == 'sDrum'){
-        newText = 'S';
-        snareSize.style.display = "inline";
-    }else if (value == 'kDrum'){
-        newText = 'B';
-        if (lineId.value == "tamaStarBubinga" || lineId.value == "tamaStarMaple"){
+    if (lineId.value == "tamaStarBubinga" || lineId.value == "tamaStarMaple"){
+        if (value == 'sDrum'){
+            newText = 'S';
+            snareSize.style.display = "inline";
+        }else if (value == 'kDrum'){
+            newText = 'B';
             kDrumSizeStar.style.display = "inline";
+        }else if (value == 'fTom'){
+            newText = 'F';
+            fDrumSizeStar.style.display = "inline";
+        }else if (value == 'rTom'){
+            newText = 'T';
+            tDrumSizeStar.style.display = "inline";
         }
-    }else if (value == 'fTom'){
-        newText = 'F';
-    }else if (value == 'rTom'){
-        newText = 'T';
-        tDrumSizeStar.style.display = "inline";
+    
+        type.textContent = newText;
+    } else if (lineId.value == "tamaStarWal"){
+        if (value == 'sDrum'){
+            newText = 'S';
+            snareSize.style.display = "inline";
+        }else if (value == 'kDrum'){
+            newText = 'B';
+            kDrumSizeStar.style.display = "inline";
+        }else if (value == 'fTom'){
+            newText = 'F';
+            fDrumSizeStar.style.display = "inline";
+        }else if (value == 'rTom'){
+            newText = 'T';
+            tDrumSizeStar.style.display = "inline";
+        }
+    
+        type.textContent = newText;
     }
-
-    type.textContent = newText;
     outputItemId()
     outputPrice()
+    
 });
 
 
@@ -524,6 +660,15 @@ tDrumSizeStar.addEventListener('change', (event) =>{
     outputPrice()
 });
 
+
+fDrumSizeStar.addEventListener('change', (event) =>{
+    size.textContent = '';
+    const value = event.target.value;
+    let newText = value;
+    size.textContent = newText;
+    outputItemId()
+    outputPrice()
+});
 
 
 
